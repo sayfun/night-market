@@ -16,7 +16,19 @@ blockquote{margin:0 0 16px;padding-left:14px;border-left:4px solid #C4511A;font-
 .card h2{margin:0 0 6px;font-size:19px}
 section{display:none}
 section.on{display:block}
+.btn{display:block;background:#1C1917;color:#fff;text-decoration:none;padding:18px 20px;margin-bottom:12px;font-size:22px;font-weight:700}
+.btn span{display:block;font-size:14px;font-weight:400;color:#CBC4B4;margin-top:2px}
 </style></head><body><main>
+<section id="home">
+<div class="tag">Soi Nam Chai Night Market</div>
+<h1>Pick your corner.</h1>
+<p>You'll read a short story about a night market that might close. Open only the version for the corner you're sitting in. No peeking at the others.</p>
+<a class="btn" href="#a">Front left</a>
+<a class="btn" href="#b">Front right</a>
+<a class="btn" href="#c">Back left</a>
+<a class="btn" href="#d">Back right</a>
+<p class="fine">Fictional scenario for class. Scanning your corner's QR code takes you straight to the right version.</p>
+</section>
 <section id="a">
 <div class="tag">Soi Nam Chai Night Market</div>
 <h1>After three floods in two years, the district wants to fix the soi's drainage.</h1>
@@ -68,7 +80,7 @@ section.on{display:block}
 </section>
 </main>
 <script>
-function show(){var h=(location.hash||'#a').slice(1).toLowerCase();var el=document.getElementById(h)||document.getElementById('a');
+function show(){var h=(location.hash||'#home').slice(1).toLowerCase();var el=document.getElementById(h)||document.getElementById('home');
 document.querySelectorAll('section').forEach(function(s){s.classList.remove('on')});el.classList.add('on');window.scrollTo(0,0)}
 window.addEventListener('hashchange',show);show();
 </script></body></html>
